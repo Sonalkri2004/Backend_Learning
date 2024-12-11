@@ -1,3 +1,6 @@
+
+// for run the code use : node file_name eg node index.js
+
 console.log("hello js");
 
 const array = [1, 2, 3, 4];
