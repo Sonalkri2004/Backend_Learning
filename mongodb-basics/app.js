@@ -26,3 +26,26 @@ mongoose
 
   // step 3 create user model 
 const User = mongoose.model("User", userSchema);
+
+
+async function runQueryExamples() {
+    try {
+      //create a new user using create method
+      const newUser = await User.create({
+        name: "Updated User",
+        email: "updated@gmail.com",
+        age: "75",
+        isActive: true,
+        tags: ["developer"],
+      });
+
+      console.log("Created new user", newUser);
+    }
+    catch (e) {
+        console.log("Error ->", e);
+      } finally {
+        await mongoose.connection.close();
+      }
+    }
+    
+    runQueryExamples();
