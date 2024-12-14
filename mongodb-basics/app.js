@@ -22,3 +22,7 @@ mongoose
     tags: [String],
     createdAt: { type: Date, default: Date.now },
   });
+
+
+  // step 3 create user model 
+const User = mongoose.model("User", userSchema);
