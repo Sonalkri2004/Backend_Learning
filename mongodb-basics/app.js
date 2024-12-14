@@ -63,6 +63,11 @@ async function runQueryExamples() {
 
       const getUserOfActiveFalse = await User.find({ isActive: true });
       console.log(getUserOfActiveFalse);
+
+      // delete a user from the db
+
+      const deletedUser = await User.findByIdAndDelete(newUser._id);
+      console.log("deleted user ->", deletedUser);
       
     }
     catch (e) {
