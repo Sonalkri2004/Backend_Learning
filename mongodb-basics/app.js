@@ -39,6 +39,16 @@ async function runQueryExamples() {
         tags: ["developer"],
       });
 
+ // another way to create user into our db
+      const newUser1 = new User({
+          name: "Raj Mukherjee",
+          email: "raj@gmail.com",
+          age: "40",
+          isActive: true,
+          tags: ["developer", "designer", "manager"],
+        });
+        await newUser1.save();
+
       console.log("Created new user", newUser);
     }
     catch (e) {
