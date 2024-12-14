@@ -58,6 +58,11 @@ async function runQueryExamples() {
 
       const allUser= await User.find();
       console.log("all user are:", allUser);
+
+      // get a user who satisfied the condition
+
+      const getUserOfActiveFalse = await User.find({ isActive: true });
+      console.log(getUserOfActiveFalse);
       
     }
     catch (e) {
