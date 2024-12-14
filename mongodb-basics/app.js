@@ -80,6 +80,18 @@ async function runQueryExamples() {
         { new: true }
       );
       console.log("updated user", updateUser);
+    
+
+    // const getJohnDoeUser = await User.findOne({ name: "John Doe" });
+    // console.log(getJohnDoeUser);
+    // const getLastCreatedUserByUserId = await User.findById(newUser._id);
+    // console.log(getLastCreatedUserByUserId, "getLastCreatedUserByUserId");
+    // const selectedFields = await User.find().select("name email -_id");
+    // console.log(selectedFields);
+    // const limitedUsers = await User.find().limit(5).skip(1);
+    // console.log(limitedUsers);
+    // const sortedUsers = await User.find().sort({ age: 1 });
+    // console.log(sortedUsers);
       
     }
     catch (e) {
