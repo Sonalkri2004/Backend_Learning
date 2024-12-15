@@ -20,6 +20,12 @@ const registerUser = async (req, res) => {
             "User is already exists either with same username or same email. Please try with a different username or email",
         });
       }
+
+ //hash user password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    
    
   } catch (e) {
     console.log(e);
