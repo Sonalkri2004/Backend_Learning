@@ -3,6 +3,9 @@
 //register controller
 const registerUser = async (req, res) => {
   try {
+
+     //extract user information from our request body
+     const { username, email, password, role } = req.body;
    
   } catch (e) {
     console.log(e);
