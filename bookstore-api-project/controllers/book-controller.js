@@ -77,6 +77,7 @@ const addNewBook = async (req, res) => {
   }
 };
 
+// update a book details 
 const updateBook = async (req, res) => {
   try {
     const updatedBookFormData = req.body;
