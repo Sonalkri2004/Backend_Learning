@@ -1,4 +1,5 @@
 
+const User = require("../models/User");
 
 //register controller
 const registerUser = async (req, res) => {
@@ -6,6 +7,18 @@ const registerUser = async (req, res) => {
 
      //extract user information from our request body
      const { username, email, password, role } = req.body;
+
+     //check if the user is already exists in our database
+    const checkExistingUser = await User.findOne({
+        $or: [{ username }, { email }],
+      });
+      if (checkExistingUser) {
+        return res.status(400).json({
+          success: false,
+          message:
+            "User is already exists either with same username or same email. Please try with a different username or email",
+        });
+      }
    
   } catch (e) {
     console.log(e);
