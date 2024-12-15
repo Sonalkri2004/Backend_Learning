@@ -27,6 +27,8 @@ const getAllBooks = async (req, res) => {
   }
 };
 
+// get a single book using book id 
+
 const getSingleBookById = async (req, res) => {
   try {
     const getCurrentBookID = req.params.id;
