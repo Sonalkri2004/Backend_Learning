@@ -61,7 +61,17 @@ const registerUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   try {
-    
+    const { username, password } = req.body;
+
+    //find if the current user is exists in database or not
+    const user = await User.findOne({ username });
+
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: `User doesn't exists`,
+      });
+    }
     }
    catch (e) {
     console.log(e);
