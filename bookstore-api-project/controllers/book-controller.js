@@ -111,6 +111,8 @@ const updateBook = async (req, res) => {
   }
 };
 
+// delete a book from db
+
 const deleteBook = async (req, res) => {
   try {
     const getCurrentBookID = req.params.id;
