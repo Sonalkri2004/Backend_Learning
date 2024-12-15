@@ -53,6 +53,8 @@ const getSingleBookById = async (req, res) => {
   }
 };
 
+// create a new book into the database
+
 const addNewBook = async (req, res) => {
   try {
     const newBookFormData = req.body;
