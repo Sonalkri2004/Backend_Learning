@@ -1,6 +1,7 @@
 
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 //register controller
 const registerUser = async (req, res) => {
