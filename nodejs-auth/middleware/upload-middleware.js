@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
 });
 
 //file filter function
+// The file filter function in Multer is used to control which files are allowed to be uploaded by checking their type or other criteria before saving them.
 const checkFileFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
     cb(null, true);
