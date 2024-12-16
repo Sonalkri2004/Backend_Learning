@@ -18,6 +18,7 @@ const uploadImageController = async (req, res) => {
     const { url, publicId } = await uploadToCloudinary(req.file.path);
 
     //store the image url and public id along with the uploaded user id in database
+    // now store the file or save the file into our database 
     const newlyUploadedImage = new Image({
       url,
       publicId,
