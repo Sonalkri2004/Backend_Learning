@@ -6,6 +6,7 @@ const cloudinary = require("../config/cloudinary");
 const uploadImageController = async (req, res) => {
   try {
     //check if file is missing in req object
+    // first we will check the file is present or not means provided by user or not
     if (!req.file) {
       return res.status(400).json({
         success: false,
