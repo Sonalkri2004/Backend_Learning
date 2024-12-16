@@ -3,6 +3,8 @@ const { uploadToCloudinary } = require("../helpers/cloudinaryHelper");
 const fs = require("fs");
 const cloudinary = require("../config/cloudinary");
 
+// this is our upload image controller logic
+
 const uploadImageController = async (req, res) => {
   try {
     //check if file is missing in req object
