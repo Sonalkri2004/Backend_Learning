@@ -144,6 +144,7 @@ const changePassword = async (req, res) => {
       });
     }
      //hash the new password here
+     // then again hash the new password before storing it into our database
      const salt = await bcrypt.genSalt(10);
      const newHashedPassword = await bcrypt.hash(newPassword, salt);
  
