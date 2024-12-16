@@ -119,6 +119,7 @@ const changePassword = async (req, res) => {
     const userId = req.userInfo.userId;
 
     //extract old and new password;
+    // first find the old password and then find new password set by the user
     const { oldPassword, newPassword } = req.body;
 
     //find the current logged in user
