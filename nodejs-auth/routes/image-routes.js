@@ -12,6 +12,8 @@ const router = express.Router();
 
 //upload the image
 // now we will create the route to upload the image by user for this we use our req middleware as used in the code below
+// we use here authmi. to first authorise the user and use admin midll. because we will only allow admin to upload the image not normal user 
+
 router.post(
   "/upload",
   authMiddleware,
