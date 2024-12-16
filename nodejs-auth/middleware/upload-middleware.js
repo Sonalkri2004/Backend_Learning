@@ -4,6 +4,10 @@ const multer = require("multer");
 const path = require("path");
 
 //set our multer storage
+// now we will create the disk storage in upload folder
+//On the Server (Local Storage):
+//Files are saved directly to a specified folder on your server (e.g., /uploads).
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
