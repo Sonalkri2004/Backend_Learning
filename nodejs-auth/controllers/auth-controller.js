@@ -123,6 +123,7 @@ const changePassword = async (req, res) => {
     const { oldPassword, newPassword } = req.body;
 
     //find the current logged in user
+    // then find the current login user because only auth user can change the password
     const user = await User.findById(userId);
 
     if (!user) {
