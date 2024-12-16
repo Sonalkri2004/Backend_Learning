@@ -14,7 +14,7 @@ const uploadImageController = async (req, res) => {
       });
     }
 
-    //upload to cloudinary
+    // if it is present then upload the image or any file in this project we are using image , to cloudinary
     const { url, publicId } = await uploadToCloudinary(req.file.path);
 
     //store the image url and public id along with the uploaded user id in database
