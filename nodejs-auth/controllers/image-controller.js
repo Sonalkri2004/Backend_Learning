@@ -111,6 +111,7 @@ const deleteImageController = async (req, res) => {
     await cloudinary.uploader.destroy(image.publicId);
 
     //delete this image from mongodb database
+    // then from the database
     await Image.findByIdAndUpdate(getCurrentIdOfImageToBeDeleted);
 
     res.status(200).json({
