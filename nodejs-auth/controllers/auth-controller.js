@@ -170,4 +170,3 @@ const changePassword = async (req, res) => {
 
    
 
-module.exports = { registerUser, loginUser};
