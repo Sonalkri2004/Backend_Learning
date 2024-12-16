@@ -1,7 +1,9 @@
 const Image = require("../models/image");
 const { uploadToCloudinary } = require("../helpers/cloudinaryHelper");
-const fs = require("fs");
+
 const cloudinary = require("../config/cloudinary");
+// now add file system and after uploading it into local machine we need to delete it from our local machine.
+const fs = require("fs");
 
 // this is our upload image controller logic
 
@@ -30,7 +32,7 @@ const uploadImageController = async (req, res) => {
     await newlyUploadedImage.save();
 
     //delete the file from local stroage
-    // fs.unlinkSync(req.file.path);
+    fs.unlinkSync(req.file.path);
 
     res.status(201).json({
       success: true,
