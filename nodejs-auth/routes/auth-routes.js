@@ -5,6 +5,7 @@ const {
   changePassword,
 } = require("../controllers/auth-controller");
 const router = express.Router();
+// add auth middleware to protect the route
 const authMiddleware = require("../middleware/auth-middleware");
 
 //all routes are related to authentication & authorization
