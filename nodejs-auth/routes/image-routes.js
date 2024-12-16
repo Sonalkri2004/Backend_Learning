@@ -27,6 +27,7 @@ router.post(
 router.get("/get", authMiddleware, fetchImagesController);
 
 //delete image route
+// create the delete route only admin will allowed to delete the image
 router.delete("/:id", authMiddleware, adminMiddleware, deleteImageController);
 
 module.exports = router;
