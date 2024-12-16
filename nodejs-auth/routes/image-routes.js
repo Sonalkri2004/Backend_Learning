@@ -23,6 +23,7 @@ router.post(
 );
 
 //to get all the images
+// now create a route to get all images by the user that are authorised
 router.get("/get", authMiddleware, fetchImagesController);
 
 //delete image route
