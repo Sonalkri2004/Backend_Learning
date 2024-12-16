@@ -50,6 +50,12 @@ const uploadImageController = async (req, res) => {
 
 // now write the controller for fetching all the images
 
+// This code is a pagination and sorting controller for fetching images from a database:
+
+// Pagination divides large sets of images into smaller chunks, sending only a specific number of images per page (limit), and allowing users to navigate through pages using the page query.
+// Sorting organizes images based on a field (like createdAt) in ascending or descending order, determined by the sortBy and sortOrder queries.
+// This makes data retrieval efficient, improving user experience and system performance.
+
 const fetchImagesController = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
