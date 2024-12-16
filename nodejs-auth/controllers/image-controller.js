@@ -106,7 +106,8 @@ const deleteImageController = async (req, res) => {
       });
     }
 
-    //delete this image first from your cloudinary stroage
+    //delete this image first from your cloudinary stroage 
+    // before deleting it from the db first delete the image from cloudinary
     await cloudinary.uploader.destroy(image.publicId);
 
     //delete this image from mongodb database
