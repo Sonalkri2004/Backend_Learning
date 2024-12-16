@@ -32,7 +32,7 @@ const uploadImageController = async (req, res) => {
     await newlyUploadedImage.save();
 
     //delete the file from local stroage
-    fs.unlinkSync(req.file.path);
+    // fs.unlinkSync(req.file.path);
 
     res.status(201).json({
       success: true,
@@ -47,6 +47,8 @@ const uploadImageController = async (req, res) => {
     });
   }
 };
+
+// now write the controller for fetching all the images
 
 const fetchImagesController = async (req, res) => {
   try {
