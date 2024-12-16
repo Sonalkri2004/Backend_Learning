@@ -83,6 +83,7 @@ const fetchImagesController = async (req, res) => {
   }
 };
 
+// now write the controller to delete the image from database 
 const deleteImageController = async (req, res) => {
   try {
     const getCurrentIdOfImageToBeDeleted = req.params.id;
